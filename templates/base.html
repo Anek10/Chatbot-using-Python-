@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body background="static/images/and.jpeg">
+
+<div class="container">
+
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="static/images/favicon.ico" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox_send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+ <header>
+<div class="main">
+<div class="logo">
+<img src="static/images/logo.jpeg">
+</div>
+<ul>
+<li class="active"> <a href="page.html"><b> Home</a> </li>
+<li> <a href="https://standrewscollege.ac.in/about-us/"><b>About</a></li>
+<li> <a href="https://standrewscollege.ac.in/admissions/"><b>Admissions</a></li>
+<li> <a href="https://standrewscollege.ac.in/academics/"><b>Academics</a></li>
+<li> <a href="https://standrewscollege.ac.in/examdates/"><b>Examinations</a></li>
+</ul>
+</div>
+<div class="title">
+<h2><marquee>Welcome to St Andrews College !!!</marquee></h2>
+</div>
+<div class="dept">
+
+<h3><b>Student Service Team</b></h3>
+</div>
+<div class="button">
+<a href="https://standrewscollege.ac.in/events-calendar/" class="btn"><b>Calendar Events</b></a>
+<a href="https://standrewscollege.ac.in/public-relations-pr-cell/#Newsletter" class="btn"><b>Learn More</b></a>
+</div>
+</header>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
